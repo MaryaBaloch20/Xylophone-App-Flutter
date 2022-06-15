@@ -9,12 +9,14 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: TextButton(
-              onPressed: () {
-                final player = AudioPlayer();
-                player.setSource(AssetSource('not1.wav'));
-              },
-              child: Text('Click me')),
+          child: Center(
+            child: TextButton(
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.setSource(AssetSource('note2.wav'));
+                },
+                child: Text('Click me!')),
+          ),
         ),
       ),
     );
