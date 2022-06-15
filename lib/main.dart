@@ -6,6 +6,12 @@ void main() => runApp(const XylophoneApp());
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({Key? key}) : super(key: key);
 
+  void playSound(int soundNo) {
+    final player = AudioPlayer();
+    player.setSource(AssetSource('note$soundNo.wav'));
+    player.resume();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,9 +24,7 @@ class XylophoneApp extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.red)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note1.wav'));
-                    player.resume();
+                    playSound(1);
                   },
                   child: const Text(''),
                 ),
@@ -29,9 +33,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all(Colors.orange)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note2.wav'));
-                    player.resume();
+                    playSound(2);
                   },
                   child: const Text(''),
                 ),
@@ -40,9 +42,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all(Colors.yellow)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note3.wav'));
-                    player.resume();
+                    playSound(3);
                   },
                   child: const Text(''),
                 ),
@@ -50,9 +50,7 @@ class XylophoneApp extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.green)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note4.wav'));
-                    player.resume();
+                    playSound(4);
                   },
                   child: const Text(''),
                 ),
@@ -61,9 +59,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all(Colors.green.shade900)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note5.wav'));
-                    player.resume();
+                    playSound(5);
                   },
                   child: const Text(''),
                 ),
@@ -71,9 +67,7 @@ class XylophoneApp extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.blue)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note6.wav'));
-                    player.resume();
+                    playSound(6);
                   },
                   child: const Text(''),
                 ),
@@ -82,9 +76,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
                   onPressed: () {
-                    final player = AudioPlayer();
-                    player.setSource(AssetSource('note7.wav'));
-                    player.resume();
+                    playSound(6);
                   },
                   child: const Text(''),
                 ),
