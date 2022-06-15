@@ -14,6 +14,7 @@ class XylophoneApp extends StatelessWidget {
                 onPressed: () {
                   final player = AudioPlayer();
                   player.setSource(AssetSource('note2.wav'));
+                  player.resume();
                 },
                 child: Text('Click me!')),
           ),
