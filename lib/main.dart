@@ -19,66 +19,83 @@ class XylophoneApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.red)),
-                  onPressed: () {
-                    playSound(1);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.red)),
+                    onPressed: () {
+                      playSound(1);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.orange)),
-                  onPressed: () {
-                    playSound(2);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.orange)),
+                    onPressed: () {
+                      playSound(2);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.yellow)),
-                  onPressed: () {
-                    playSound(3);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.yellow)),
+                    onPressed: () {
+                      playSound(3);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.green)),
-                  onPressed: () {
-                    playSound(4);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.green)),
+                    onPressed: () {
+                      playSound(4);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.green.shade900)),
-                  onPressed: () {
-                    playSound(5);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.green.shade900)),
+                    onPressed: () {
+                      playSound(5);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.blue)),
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.blue)),
+                    onPressed: () {
+                      playSound(6);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.purple)),
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  child: const Text(''),
+                Expanded(
+                  child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.purple)),
+                    onPressed: () {
+                      playSound(6);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
               ],
             ),
