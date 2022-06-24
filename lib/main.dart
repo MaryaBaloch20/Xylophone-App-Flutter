@@ -12,92 +12,61 @@ class XylophoneApp extends StatelessWidget {
     player.resume();
   }
 
+  Expanded addMusicButton(Color color, int soundNo) {
+    return Expanded(
+      child: FloatingActionButton(
+        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        backgroundColor: color,
+        onPressed: () {
+          playSound(soundNo);
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.deepPurple.shade300,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: const Center(child: Text("Xylophone App")),
+        ),
         body: SafeArea(
           child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.red)),
-                    onPressed: () {
-                      playSound(1);
-                    },
-                    child: const Text(''),
+            child: Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  addMusicButton(Colors.red, 1),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.orange)),
-                    onPressed: () {
-                      playSound(2);
-                    },
-                    child: const Text(''),
+                  addMusicButton(Colors.purple, 2),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.yellow)),
-                    onPressed: () {
-                      playSound(3);
-                    },
-                    child: const Text(''),
+                  addMusicButton(Colors.blue, 3),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green)),
-                    onPressed: () {
-                      playSound(4);
-                    },
-                    child: const Text(''),
+                  addMusicButton(Colors.green, 4),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green.shade900)),
-                    onPressed: () {
-                      playSound(5);
-                    },
-                    child: const Text(''),
+                  addMusicButton(Colors.deepOrange, 5),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.blue)),
-                    onPressed: () {
-                      playSound(6);
-                    },
-                    child: const Text(''),
+                  addMusicButton(Colors.yellow, 6),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.purple)),
-                    onPressed: () {
-                      playSound(6);
-                    },
-                    child: const Text(''),
-                  ),
-                ),
-              ],
+                  addMusicButton(Colors.orange, 1),
+                ],
+              ),
             ),
           ),
         ),
