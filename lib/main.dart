@@ -31,7 +31,11 @@ class XylophoneApp extends StatelessWidget {
         backgroundColor: Colors.deepPurple.shade300,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: const Center(child: Text("Xylophone App")),
+          title: const Center(
+              child: Text(
+            "Xylophone App",
+            style: TextStyle(fontSize: 30),
+          )),
         ),
         body: SafeArea(
           child: Center(
@@ -44,11 +48,11 @@ class XylophoneApp extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  addMusicButton(Colors.purple, 2),
+                  addMusicButton(Colors.orange, 2),
                   const SizedBox(
                     height: 10,
                   ),
-                  addMusicButton(Colors.blue, 3),
+                  addMusicButton(Colors.yellow, 3),
                   const SizedBox(
                     height: 10,
                   ),
@@ -56,15 +60,15 @@ class XylophoneApp extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  addMusicButton(Colors.deepOrange, 5),
+                  addMusicButton(Colors.lightBlue, 5),
                   const SizedBox(
                     height: 10,
                   ),
-                  addMusicButton(Colors.yellow, 6),
+                  addMusicButton(Colors.blue.shade900, 6),
                   const SizedBox(
                     height: 10,
                   ),
-                  addMusicButton(Colors.orange, 1),
+                  addMusicButton(Colors.purple, 1),
                 ],
               ),
             ),
