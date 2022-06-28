@@ -15,7 +15,7 @@ class XylophoneApp extends StatelessWidget {
   Expanded addMusicButton(Color color, int soundNo) {
     return Expanded(
       child: FloatingActionButton(
-        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
         backgroundColor: color,
         onPressed: () {
           playSound(soundNo);
@@ -27,10 +27,11 @@ class XylophoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple.shade300,
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.deepPurple,
           title: const Center(
               child: Text(
             "Xylophone App",
